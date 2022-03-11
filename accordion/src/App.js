@@ -7,11 +7,16 @@ function App() {
   const [questions, setQuestions] = useState(data);
 
   return (
-    <section>
-      {questions.map((question) => {
-        return <SingleQuestion key={question.id} {...question} />
-      })}
-    </section>
+    <main>
+      <div className="container">
+      <h1 className="title">Frequently Asked Questions</h1>
+        <section>
+          {questions.map((question) => {
+            return <SingleQuestion key={question.id} {...question} />
+          })}
+        </section>
+      </div>
+    </main>
   );
 }
 
